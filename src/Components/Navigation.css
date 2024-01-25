@@ -1,4 +1,5 @@
 .Nav{
+    position: fixed;
     width: 100vw;
     height: 75px;
     background-color: black;
@@ -21,7 +22,7 @@
 }
 .Nav-Link{
     display: flex;
-    color: #fafafad0;
+    color: #fafafae1;
     text-decoration: none;
     font-family: 'UI-Light';
     font-size: 20px;

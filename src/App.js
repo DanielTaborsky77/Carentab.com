@@ -1,3 +1,4 @@
+import Homepage from "./Components/Homepage";
 import Navigation from "./Components/Navigation";
 
 const App = () =>{
@@ -5,7 +6,7 @@ const App = () =>{
     return (
       <div>
         <Navigation />
-        
+        <Homepage />
       </div>
       
 
