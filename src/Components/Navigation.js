@@ -7,14 +7,14 @@ const Navigation = () => {
             
             <div className="Nav-Left">
                 
-                <a href="" className="Nav_Link"><img src={Image1} alt="" /></a>
-                <a href="" className="Nav_Link"><h1>Carentab</h1></a>            
+                <img className="Logo" src={Image1} width="50px" alt="" />
+                <a href="" className="Nav-Link">Carentab</a>            
                 
             </div>
             <div className="Nav-Right">
-                <a href="" className="Nav_Link"><h1>Naše vozy</h1></a>
-                <a href="" className="Nav_Link"><h1>Vaše dotazy</h1></a>
-                <a href="" ><button className="Nav_Button">Rezervovat</button></a>
+                <a href="" className="Nav-Link Nav-Link-Animated">Naše vozy</a>
+                <a href="" className="Nav-Link Nav-Link-Animated">Vaše dotazy</a>
+                <button className="Nav-Button">REZERVOVAT</button>
             </div>
         </div>
     )

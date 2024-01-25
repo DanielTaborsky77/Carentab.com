@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'UI-Light';
+    src: url("Fonts/SegoeUI-Light.ttf");
+}
+
+@font-face{
+    font-family: 'UI-Normal';
+    src: url("Fonts/SegoeUI.ttf");
+}
+
+@font-face{
+    font-family: 'UI-Italic';
+    src: url("Fonts/SegoeUI-Italic.ttf");
+}
+
+@font-face{
+    font-family: 'UI-Semibold';
+    src: url("Fonts/SegoeUI-SemiBold.ttf");
+}
+
+@font-face{
+    font-family: 'UI-Bolditalic';
+    src: url("Fonts/SegoeUI-BoldItalic.ttf");
+}
+
+@font-face{
+    font-family: 'UI-Bold';
+    src: url("Fonts/SegoeUI-Bold.ttf");
+}
