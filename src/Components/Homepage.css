@@ -14,9 +14,9 @@
     align-items: center;
 }
 .Reserve-Car-Title{
-    font-family: 'UI-Normal';
+    font-family: 'UI-Semibold';
     font-size: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 }
 .Double-Input{
     display: flex;
@@ -26,8 +26,8 @@
 }
 .Classic-Input{
     border: none;
-    background-color: #c7eeffd5;
-    padding: 15px 20px;
+    background-color: #c7eeffad;
+    padding: 10px 15px;
     width: 48%;
     font-size: 100%;
     font-family: "UI-Light";
@@ -38,15 +38,47 @@
 }
 .Long-Input{
     border: none;
-    background-color: #c7eeffd5;
+    background-color: #c7eeffaf;
     padding: 15px 20px;
     width: 100%;
 }
 .Checkbox-Input{
     width: 50%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 .Classic-Label{
     font-family: "UI-Normal";
     margin-left: 20px;
+}
+.Double-Buttons{
+    margin-top: 1%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Conditions-Button{
+    width: 42%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    align-items: center;
+    font-family: 'UI-Bold';
+    font-size: 100%;
+    cursor: pointer;
+}
+.Reserve-Button{
+    width: 40%;
+    border: none;
+    background-color: #1D242B;
+    color: #C7EEFF;
+    font-family: 'UI-Bold';
+    font-size: 125%;
+    cursor: pointer;
+}
+.Reserve-Button:hover{
+    background-color: #C7EEFF;
+    color: #1D242B;
+
 }
