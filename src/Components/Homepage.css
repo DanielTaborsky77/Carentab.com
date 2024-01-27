@@ -2,7 +2,10 @@
     padding-top: 75px;
     height: 100vh;
     display: flex;
+    flex-direction: row;
 }
+
+/*Homepage Left side*/
 .Homepage-Left-Side{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -80,5 +83,83 @@
 .Reserve-Button:hover{
     background-color: #C7EEFF;
     color: #1D242B;
+}
 
+/*Homepage Right side*/
+.Homepage-Right-Side{
+    position: relative;
+    margin-left: 3vw;
+    width: 47vw;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.733)),
+    url(../assets/images/Background.jpg);
+    background-position: 10% 50%;
+}
+.Social-Media{
+    margin-left: 40px;
+    margin-top: 36px;
+}
+.Social-Media img{
+    margin-bottom: 20px;
+    width: 50px;
+}
+.Main-Content{
+    align-items: center;
+    padding-top: 130px;
+    text-align: right;
+    margin-right: 5%;
+    color: #fafafaf1;
+}
+.Main-Title{
+    font-family: 'UI-Semibold';
+    font-size: 35px;
+    margin-bottom: 75px;
+}
+.Advantages{
+    margin-left: 70%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'UI-Light';
+    margin-bottom: 50px;
+}
+.Atributes{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.Atributes  img{
+    width: 30px;
+}
+.Paragraph{
+    line-height: 30px;
+    margin-left: 40%;
+    font-family: 'UI-Light';
+    width: 60%;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.Contact {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    right: 25%;
+    left: 25%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: "UI-Light";
+    transform: translateY(-50%);
+}
+.Contact p {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.Line-Between {
+    border-right: 1px solid rgba(255, 255, 255, 0.788);
 }
