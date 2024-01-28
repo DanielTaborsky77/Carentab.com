@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useAnimation, useInView, motion } from 'framer-motion';
 
 import './Homepage.css'
 import PdfImage from '../assets/images/Pdf.png'
@@ -10,6 +11,19 @@ import Gas from '../assets/images/Gas.png'
 
 const Homepage = () =>{
     const [type, setType] = useState('text');
+
+    /* Animation */
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
+    const mainControls = useAnimation();
+  
+    useEffect(() => {
+      if (isInView) {
+        mainControls.start("visible");
+      }
+    },  [isInView]);
+    /**/
 
     return(
         <div className="Homepage">
@@ -51,12 +65,38 @@ const Homepage = () =>{
                 </div>
             </div>
             <div className="Homepage-Right-Side">
+                
                 <div className="Social-Media">
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{
+                        duration: 1, 
+                        delay: 0.25
+                    }}
+                >
                     <a href="https://www.facebook.com/p/Carentabcom-100075992629918/" target="_blank"><img src={Facebook} alt="" /></a>
                     <a href="https://www.instagram.com/carentab.com_info/" target="_blank"><img src={Instagram} alt="" /></a>
+                </motion.div>
                 </div>
-
-                <div className="Main-Content"> 
+                
+                <div ref={ref} className="Main-Content"> 
+                <motion.div
+                    variants={{
+                        hidden: { opacity: 0, y: 75 },
+                        visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{
+                        duration: 1, 
+                        delay: 0.25
+                    }}
+                >
                 <p className="Main-Title">Autopůjčovna Karlovarského kraje</p>
 
                     <div className="Advantages">
@@ -85,7 +125,7 @@ const Homepage = () =>{
                     na telefonní číslo v dolní části.
                     </p>
 
-                    
+                </motion.div>   
                 </div>
                 <div className="Contact">
                         <p className="Line-Between">info@carentab.com</p>
