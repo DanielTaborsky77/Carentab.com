@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import './Homepage.css'
 import PdfImage from '../assets/images/Pdf.png'
 import Instagram from '../assets/images/Instagram.png'
@@ -5,7 +7,10 @@ import Facebook from '../assets/images/Facebook.png'
 import Time from '../assets/images/Time.png'
 import Tachometer from '../assets/images/Tachometer.png'
 import Gas from '../assets/images/Gas.png'
+
 const Homepage = () =>{
+    const [type, setType] = useState('text');
+
     return(
         <div className="Homepage">
             <div className="Homepage-Left-Side">
@@ -16,7 +21,7 @@ const Homepage = () =>{
                     <input className="Classic-Input" type="text" id="" placeholder="Příjmení *"/>
                 </div>
                 <div className="Double-Input">
-                    <input className="Classic-Input" type="date" id="" placeholder="Datum nar *"/>
+                    <input className="Classic-Input" type="text" placeholder="Datum nar *" onFocus={(e) => { e.target.type = 'date'; }}/>    
                     <input className="Classic-Input" type="tel" id="" placeholder="Tel *"/>
                 </div>
                 <div className="Single-Input">
@@ -29,8 +34,8 @@ const Homepage = () =>{
                     <input className="Classic-Input" type="text" id="" placeholder="Město vyzvednutí *"/>
                 </div>
                 <div className="Double-Input">
-                    <input className="Classic-Input" type="date" id="" placeholder="Od *"/>
-                    <input className="Classic-Input" type="date" id="" placeholder="Do *"/>
+                    <input className="Classic-Input" type={type} id="" placeholder="Od *" onFocus={(e) => (setType("datetime-local"))}/>
+                    <input className="Classic-Input" type={type} id="" placeholder="Do *" onFocus={(e) => { e.target.type = 'datetime-local';}}/>
                 </div>
                 <div className="Checkbox-Input">
                     <input className="Classic-Checkbox" type="Checkbox" id="Group-B"/>
@@ -56,15 +61,15 @@ const Homepage = () =>{
 
                     <div className="Advantages">
                         <div className="Atributes">
-                            <img src={Time} alt="" />
+                            <img className='Time' src={Time} alt="" />
                             <p>Půjčení do 15 minut</p>
                         </div>
                         <div className="Atributes">
-                            <img src={Gas} alt="" />
+                            <img className='Gas' src={Gas} alt="" />
                             <p>Plná nádrž</p>
                         </div>
                         <div className="Atributes">
-                            <img src={Tachometer} alt="" />
+                            <img className='Tachometer' src={Tachometer} alt="" />
                             <p>250 Km v ceně</p>
                         </div>
                     </div>
