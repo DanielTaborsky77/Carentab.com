@@ -1,0 +1,47 @@
+.Vehicle-Card {
+    width: 60vw;
+    background-color: #1D242B;
+    height: 70vh;
+    padding: 80px 100px;
+}
+.Vehicle-Name {
+    font-family: "UI-Bold";
+    color: #FAFAFA;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.Vehicle-Atributes {
+    font-family: "UI-Light";
+    color: #FAFAFA;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.Vehicle-Atribute {
+    margin-bottom: 25px;
+}
+.Vehicle-Links {
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Vehicle-Button {
+    border: none;
+    font-family: "UI-Bold";
+    font-size: 20px;
+    padding: 10px 60px;
+    background-color: #C7EEFF;
+    color: #30363d;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.Vehicle-Button:hover {
+    background-color: #30363d;
+    color: #C7EEFF;
+}
+.Vehicle-Price {
+    font-size: 20px;
+    font-family: "UI-Bold";
+    color: #FAFAFA;
+}
