@@ -1,13 +1,14 @@
 .Homepage{
     padding-top: 75px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
+    margin-bottom: 125px;
 }
 
 /*Homepage Left side*/
 .Homepage-Left-Side{
-    margin-top: 50px;
+    padding-top: 50px;
     margin-bottom: 50px;
     width: 50vw;
     border-right:solid 1px rgba(0, 0, 0, 0.301);
@@ -21,47 +22,74 @@
     font-size: 35px;
     margin-bottom: 75px;
 }
+.Form-Reserve{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .Double-Input{
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    margin-bottom: 2%;
+    width: 500px;
+    margin-bottom: 20px;
+}
+.Input-Field{
+    display: flex;
+    flex-direction: column;
+    width: 48%
 }
 .Classic-Input{
     border: none;
     background-color: #c7eeffad;
     padding: 10px 15px;
-    width: 48%;
+    width: 100%;
     font-size: 100%;
     font-family: "UI-Light";
+}
+.error{
+    color: rgb(246, 97, 97);
+    padding-left: 5px;
+    font-family: "UI-Light";
+    font-size: 14px;
 }
 .Single-Input{
-    width: 50%;
-    margin-bottom: 2%;
+    width: 500px;
+    margin-bottom: 20px;
 }
 .Long-Input{
+    border: none;
+    border-color: white;
     font-family: "UI-Light";
     font-size: 100%;
-    border: none;
     background-color: #c7eeffaf;
     padding: 10px 15px;
     width: 100%;
 }
 .Checkbox-Input{
-    width: 50%;
+    width: 500px;
     margin-bottom: 1%;
 }
 .Classic-Label{
     font-family: "UI-Normal";
     margin-left: 20px;
 }
+.Label-Error{
+    font-family: "UI-Normal";
+    margin-left: 20px;
+    color: rgb(246, 97, 97);
+}
 .Double-Buttons{
     margin-top: 1%;
-    width: 50%;
+    width: 500px;
     display: flex;
     justify-content: space-evenly;
 }
 .Conditions-Button{
+    text-decoration: none;
+    color: #1D242B;
     width: 42%;
     border: none;
     background-color: rgba(255, 255, 255, 0);
@@ -91,6 +119,7 @@
 .Homepage-Right-Side{
     position: relative;
     margin-left: 3vw;
+    padding-bottom: 100px;
     width: 47vw;
     display: flex;
     flex-direction: row;
@@ -99,12 +128,16 @@
     background-position: 10% 50%;
 }
 .Social-Media{
+    margin-right: 40px;
     margin-left: 40px;
     margin-top: 36px;
 }
 .Social-Media img{
     margin-bottom: 20px;
     width: 50px;
+}
+.Socials-Responzive{
+    display: none;
 }
 .Main-Content{
     padding-top: 130px;
@@ -176,38 +209,262 @@
 /* Respozivity for 2K resolution */
 @media screen and (min-width: 1980px) and (max-width: 3000px) {
     .Main-Content{
+        padding-top: 0px;
+        display: flex;
+        align-items: center;
+    }
+    .Double-Input{
+        width: 600px;
+        margin-bottom: 30px;
+    }
+    .Single-Input{
+        width: 600px;
+        margin-bottom: 30px;
+    }
+    .Checkbox-Input{
+        width: 600px;
+    }
+    .Double-Buttons{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1980px) {
+    .Advantages {
+        margin-left: 60%;
+        width: 40%;
+    }
+    .Paragraph {
+        margin-left: 0%;
+        width: 100%;
+    }
+    .Contact {
+        right: 1%;
+        left: 1%;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .Advantages {
+        margin-left: 50%;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .Advantages {
+        margin-left: 40%;
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .Homepage{
+        padding-top: 0px;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+    }
+    .Homepage-Right-Side{
+        padding-top: 75px;
+        position: relative;
+        margin-left: 0vw;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.733)),
+        url(../assets/images/Background.jpg);
+        background-position: 10% 50%;
+    }
+    .Social-Media{
+        display: none;
+    }
+    .Socials-Responzive{
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .Socials-Responzive a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .Socials-Responzive img{
+        width: 50px;
+    }
+    .Main-Content{
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: 0px;
+    }
+    .Advantages{
+        width: 100%;
+        margin-left: 0px;
+        justify-content: space-around;
+    }
+    .Atributes{
+        justify-content: center;
+    }
+    .Atributes p{
+        margin-left: 20px;
+    }
+
+    .Paragraph {
+        margin-left: 0%;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .Homepage-Left-Side{
+    padding-top: 0px;
+        min-height: 100vh;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        border-right: none;
+    }
+    .Double-Input{
+        width: 600px;
+        margin-bottom: 30px;
+    }
+    .Single-Input{
+        width: 600px;
+        margin-bottom: 30px;
+    }
+    .Checkbox-Input{
+        width: 600px;
+    }
+    .Double-Buttons{
+        margin-top: 1%;
+        width: 500px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch
+    }
+}
+@media screen and (min-width: 714px) {
+    .Responsive-Logo {
+        display: none;
+    }
+}
+@media screen and (max-width: 715px) {
+    /**/
+    .Homepage-Right-Side {
+        padding-top: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.733)),
+        url(../assets/images/Background.jpg);
+        background-position: 40% 50%;
+    }
+    .Main-Content {
+        padding-top: 50px;
+    }
+    .Responsive-Logo {
+        display: block;
+        margin-bottom: 50px;
+    }
+    .Responsive-Logo img {
+        margin-bottom: 10px;
+    }
+    .Responsive-Logo p {
+        font-size: 25px;
+        font-family: 'UI-Light';
+    }
+    .Main-Title{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .Atributes {
+        font-size: 19px;
+    }
+    .Time {
+        width: 28px;
+    }
+    .Gas {
+        width: 28px;
+        height: 28px;
+    }
+    .Tachometer {
+        width: 28px;
+        height: 21px;
+    }
+    .Paragraph {
+        font-size: 19px;
+        width: 90%;
+    }
+    .Socials-Responzive {
+        margin-top: 0px;
+    }
+    .Socials-Responzive img {
+        width: 40px;
+    }
+    .Contact p {
+        font-size: 15px;
+        text-align: center;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /**/
+    .Reserve-Car-Title {
+        margin-top: 100px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .Double-Input {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .Input-Field{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .Classic-Input {
+        width: 90vw;
+        
+        height: 50px;
+        font-size: 19px;
+    }
+    .Single-Input {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 0px;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        color: #1D242B;
     }
-    .Main-Title{
-        font-size: 40px;
-        margin-bottom: 125px;
+    .Long-Input {
+        font-size: 19px;
+        padding: 10px 15px;
+        width: 90%;
+        height: 50px;
     }
-    .Advantages{
+    .Checkbox-Input {
+        font-size: 19px;
         display: flex;
-        flex-direction: column;
-        margin-bottom: 100px;
+        width: 90%;
+       
     }
-    .Atributes{
-        font-size: 25px;
+    .Double-Buttons {
+        margin-top: 30px;
+        flex-direction: column-reverse;
+        max-width: 100%;
+        align-items: center;
     }
-    .Time{
-        width: 35px;
+    .Reserve-Button {
+        padding: 10px 10px;
+        margin-bottom: 10px;
     }
-    .Gas{
-        width: 35px;
-        height: 35px;
-    }
-    .Tachometer{
-        width: 37px;
-    }
-    .Paragraph{
-        line-height: 35px;
-        font-size: 25px;
-    }
-    .Contact {
-        font-size: 25px;
+    .Conditions-Button {
+        width: 200px;
+        font-family: 'UI-Light';
+
     }
 }

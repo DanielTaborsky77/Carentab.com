@@ -1,13 +1,70 @@
 .Vehicles-All {
+    padding: 150px 0px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 125px;
-    height: 100vh;
+    min-height: 100vh;
 }
 .Vehicles-Title {   
     font-family: "UI-SemiBold";
     font-size: 35px;
     text-align: center;
-    margin-bottom: 50px;
+    padding-bottom: 0px;
+}
+.custom-arrow{
+    color: black;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0px 150px;
+}
+
+@media screen and (max-width: 1805px) {
+    .custom-arrow{
+        margin: 0px 50px;
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    .custom-arrow{
+        margin: 0px 0px;
+    }
+    .Vehicles-All {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .Vehicles-All {
+        padding: 0px 0px;
+    }
+}
+@media screen and (max-width: 1115px) {
+    .Vehicles-All {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+@media screen and (max-width: 755px) {
+    .Vehicles-All {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 715px) {
+    .Vehicles-All {
+        margin-top: 100px;
+    }
+    .Vehicles-Title {
+        font-size: 30px;
+        padding-bottom: 0px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Vehicles-All {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }

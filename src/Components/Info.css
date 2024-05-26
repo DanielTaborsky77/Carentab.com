@@ -1,0 +1,93 @@
+.Info {
+    padding: 150px 0px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 250px;
+}
+.Info-Title{
+    font-family: "UI-SemiBold";
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+.Info-Content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Info-Steps p{
+    margin-bottom: 35px;
+    font-family: "UI-Light";
+    font-size: 18px;
+}
+.Info-Reserve{
+    margin-top: 40px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-family: "UI-Semibold";
+    background-color: #0077C0;
+    color: #FAFAFA;
+    border: none;
+    cursor: pointer;
+}
+.Info-Reserve:hover{
+    background-color: #0076c09a;
+    color: #FAFAFA;
+}
+.Info-Ilustration{
+    width: 550px;
+}
+
+@media screen and (max-width: 1400px) {
+    .Info-Content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .Info-Ilustration {
+        width: 400px;
+    }
+    .Info-Steps {
+        padding: 0px 25px;
+    }
+    .Info-Steps p {
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .Info {
+        padding: 0px 0px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .Info-Title {
+        margin-bottom: 50px;
+    }
+    .Info-Content {
+        flex-direction: column-reverse;
+    }
+    .Info-Ilustration {
+        width: 100%;
+        margin-bottom: 75px;
+    }
+    .Info-Steps {
+        text-align: center;
+    }
+    .Info {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .Info-Title {
+        font-size: 30px;
+        margin-bottom: 75px;
+    }
+    .Info-Ilustration {
+        width: 100%;
+    }
+    .Info-Steps {
+        text-align: center;
+    }
+}

@@ -28,6 +28,7 @@
     font-family: 'UI-Light';
     font-size: 20px;
     margin-right: 50px;
+    align-items: center;
 }
 
 /*Animation of Link*/
@@ -82,4 +83,9 @@
 .Nav-Button:hover{
     background-color: #FAFAFA;
     color: #0076c0bd;
+}
+@media screen and (max-width: 715px) {
+  .Nav {
+    display: none;
+  }
 }

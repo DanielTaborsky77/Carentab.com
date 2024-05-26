@@ -1,18 +1,23 @@
-import Homepage from "./Components/Homepage";
+
+
 import Navigation from "./Components/Navigation";
+import Homepage from "./Components/Homepage";
 import Vehicles from "./Components/Vehicles";
+import Info from "./Components/Info";
+import Footer from "./Components/Footer";
 
-const App = () =>{
-  
+
+
+const App = () => {
     return (
-      <div>
-        <Navigation />
-        <Homepage />
-        <Vehicles/>
-      </div>
-      
-
-    )
+        <div>
+          <Navigation />
+          <Homepage />
+          <Vehicles />
+          <Info />
+          <Footer />
+        </div>
+    );
 }
-export default App;
 
+export default App;

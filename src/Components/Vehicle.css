@@ -1,19 +1,21 @@
 .Vehicle-Card {
-    width: 60vw;
-    background-color: #1D242B;
-    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    width: 55vw;
+    min-height: 70vh;
     padding: 80px 100px;
+    padding-right: 0px;
+    align-items: center;
 }
 .Vehicle-Name {
     font-family: "UI-Bold";
-    color: #FAFAFA;
+    color: #1D242B;
     font-size: 35px;
-    text-align: center;
     margin-bottom: 70px;
 }
 .Vehicle-Atributes {
     font-family: "UI-Light";
-    color: #FAFAFA;
+    color: #000000;
     font-size: 20px;
     margin-bottom: 50px;
 }
@@ -31,17 +33,144 @@
     font-family: "UI-Bold";
     font-size: 20px;
     padding: 10px 60px;
-    background-color: #C7EEFF;
-    color: #30363d;
+    background-color: #30363d;
+    color: #C7EEFF;
     margin-bottom: 10px;
     cursor: pointer;
 }
 .Vehicle-Button:hover {
-    background-color: #30363d;
-    color: #C7EEFF;
+    background-color: #C7EEFF;
+    color: #30363d;
 }
 .Vehicle-Price {
     font-size: 20px;
     font-family: "UI-Bold";
-    color: #FAFAFA;
+    color: #1D242B;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+}
+
+/*Ceník*/
+
+#Price-Window-Background-Yellow,
+#Price-Window-Background-Kugstr{
+    font-family: "UI-Light";
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000007c;
+    backdrop-filter: blur(10px);
+}
+.Price-Window {
+    background-color: #FFFFFF;
+    padding: 50px;
+    width: 1000px;
+    text-align: center;
+    position: relative;
+    
+}
+#Close-Price-Window {
+    color: #000000;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: "UI-Normal";
+}
+.Prices {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+.Prices div{
+    background-color: #000000;
+    padding: 20px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 19px;
+}
+.Days {
+    margin-bottom: 60px;
+}
+.Price-Info {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+/*Responzive pricelist*/
+@media screen and (max-width: 715px) {
+    .Price-Window {
+        background-color: #FFFFFF;
+        padding: 60px 20px;
+        width: 400px;
+        text-align: center;
+        position: relative;
+        
+    }
+    .Prices {
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    .Prices div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 17px;
+    }
+    .Days {
+        margin-bottom: 0px;
+    }
+    .Price-Info {
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (max-width: 1805px){
+    .Vehicle-Card {
+        padding: 80px 0px;
+    }
+}
+@media screen and (max-width: 1630px){
+    .Vehicle-Card {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .Vehicle-Links {
+        width: auto;
+    }
+    .Vehicle-IMG{
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 1115px) {
+    .Vehicle-IMG img{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 755px) {
+    .Vehicle-IMG img{
+        width: 350px;
+    }
+    .Vehicle-Name {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .Vehicle-IMG{
+        margin-bottom: 20px;
+    }
+    .Vehicle-IMG img{
+        width: 275px;
+    }
 }

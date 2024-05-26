@@ -1,22 +1,28 @@
+
 import "./Navigation.css"
-import Image1 from "../assets/images/Logo.png";
+import Logo from "../assets/images/Logo.png";
+import Hamburger from "./Hamburger";
 
 const Navigation = () => {
     return (
-        <div className="Nav">
+        <div>
             
-            <div className="Nav-Left">
-                
-                <img className="Logo" src={Image1} width="50px" alt="" />
-                <a href="" className="Nav-Link">Carentab</a>            
-                
+            <div className="Nav">
+                <div className="Nav-Left">
+                    <a href="#Homepage" className="Nav-Link"><img className="Logo" src={Logo} width="50px"  alt="" />Carentab</a>                           
+                </div>
+                <div className="Nav-Right">
+                    <a href="#Vehicles" className="Nav-Link Nav-Link-Animated">Naše vozy</a>
+                    <a href="#Info" className="Nav-Link Nav-Link-Animated">Jak to funguje?</a>
+                    <a href="#Homepage"><button className="Nav-Button">REZERVOVAT</button></a>
+                </div>
             </div>
-            <div className="Nav-Right">
-                <a href="" className="Nav-Link Nav-Link-Animated">Naše vozy</a>
-                <a href="" className="Nav-Link Nav-Link-Animated">Vaše dotazy</a>
-                <button className="Nav-Button">REZERVOVAT</button>
-            </div>
+
+            <Hamburger />
         </div>
+
+
+
     )
         
     
