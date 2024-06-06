@@ -23,18 +23,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Nastaví e-mailové proměnné
     $toEmail = "info@carentab.com";
     $subject = "Rezervace vozidla $car";
-    $message = "Jméno: $firstName\n";
-    $message .= "Příjmení: $lastName\n";
-    $message .= "Datum narození: $birthday\n";
-    $message .= "Telefon: $phone\n";
-    $message .= "E-mail: $email\n";
-    $message .= "Auto: $car\n";
-    $message .= "Město: $town\n";
-    $message .= "Od: $from\n";
-    $message .= "Do: $to\n";
-    $message .= "Skupina B: $groupB\n";
-    $message .= "Souhlas s GDPR: $gdpr\n";
-    $headers = 'From: ' . "Rezervace_Vozidla@Carentab.com" . "\r\n";
+    $message = '
+    <html>
+    <head>
+        <title>Rezervace vozidla</title>
+        <style>
+            .Email {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                width: 80%;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                margin-left: 50px;
+            }
+            .Email img {
+                margin-top: 50px;
+            }
+            .Tittle {
+                font-size: 30px;
+                margin-top: 20px;
+            }
+            .Content {
+                margin-top: 20px;
+                width: 700px;
+                font-size: 18px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Email">
+
+            <p class="Tittle">Rezervace vozidla</p>
+            
+            <div class="Content">
+                <div>
+                    <p><strong>Jméno:</strong> '.$firstName.'</p>
+                    <p><strong>Příjmení:</strong> ' .$lastName.'</p>
+                    <p><strong>Datum narození:</strong> '.$birthday.'</p>
+                    <p><strong>Telefon:</strong> '.$phone.'</p>
+                    <p><strong>E-mail:</strong> '.$email.'</p>
+                </div>
+                <div>
+                    <p><strong>Chci auto:</strong> '.$car.'</p>
+                    <p><strong>Chci přistavit auto do města:</strong> '.$town.'</p>
+                    <p><strong>Pujčím od:</strong> '.$from.' <strong>do:</strong> '.$to.'</p>
+                    <p><strong>Vlastním ridičský průkaz skupiny B</strong> '.$groupB.'</p>
+                    <p><strong>Souhlasím s GDPR:</strong> '.$gdpr.'</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    ';
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: Rezervace_Vozidla@Carentab.com' . "\r\n";
     // Odeslat e-mail
     if (mb_send_mail($toEmail, $subject, $message, $headers)) {
         http_response_code(200);

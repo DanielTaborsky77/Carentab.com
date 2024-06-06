@@ -32,7 +32,7 @@ const Info = () => {
                 transition={{ duration: 1, delay: 1 }}
                 className="Info-Steps">
                     <p>1) Zarezervujete si vozidlo pomocí e-mailového formuláře nebo telefonní domluvou.</p>
-                    <p>2) Vyzvednete si nebo Vám bude přistaveno požadované vozidlo na místo předem domluvené.</p>
+                    <p>2) Vyzvednete si nebo Vám bude přistaveno (přistavení mimo cheb za 500 Kč) požadované vozidlo na místo předem domluvené.</p>
                     <p>3) Ve vozidle Vám vše vysvětlíme a sepíšeme smlouvu pro zapůjčení.</p>
                     <p>4) Zaplatíte požadovanou vratnou kauci a můžete směle vyrazit.</p>
 
