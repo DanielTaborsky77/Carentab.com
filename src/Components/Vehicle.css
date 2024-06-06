@@ -52,10 +52,85 @@
     background: none;
 }
 
-/*Ceník*/
 
+/*More Atributes*/
+.Vehicle-Info-Button{
+    text-decoration: underline;
+    border: none;
+    font-family: "UI-Normal";
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: #000000;
+}
+#Open-Car-Atributes-Kugstr,
+#Open-Car-Atributes-Yellow{
+    z-index: 1;
+    display: flex;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000ad;
+    backdrop-filter: blur(10px);
+}
+.Car-Window{
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 1500px;
+    height: 85%;
+    background-color: #FFFFFF;
+    padding: 70px 100px;
+}
+#Close-Car-Window {
+    color: #000000bd;
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 50px;
+    cursor: pointer;
+    font-family: 'UI-Normal';
+}
+.Car-Title{
+    font-size: 35px;
+    font-family: "UI-Bold";
+    text-align: center;
+}
+.Car-Atributes-Top{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.Car-Atributes{
+    font-size: 21px;
+    font-family: 'UI-Light';
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+.Car-Atribute{
+    margin-bottom: 20px;
+}
+.Car-Descriptions{
+    width: 70%;
+    font-family: 'UI-Light';
+    font-size: 21px;
+}
+.Car-Description{
+    margin-top: 35px;
+}
+
+/*PriceList*/
 #Price-Window-Background-Yellow,
 #Price-Window-Background-Kugstr{
+    z-index: 1;
     font-family: "UI-Light";
     display: flex;
     position: fixed;
@@ -84,7 +159,7 @@
     right: 10px;
     font-size: 30px;
     cursor: pointer;
-    font-family: "UI-Normal";
+    font-family: "UI-Normal", sans-serif; /* Přidání záložního písma */
 }
 .Prices {
     display: flex;
@@ -105,15 +180,99 @@
     font-size: 19px;
     margin-bottom: 20px;
 }
-/*Responzive pricelist*/
+
+/*Responzive*/
+
+@media screen and (max-width: 1805px){
+    .Vehicle-Card {
+        padding: 80px 0px;
+    }
+}
+
+@media screen and (max-width: 1630px){
+    .Vehicle-IMG-Yellow {
+        height: 280px;
+    }
+    .Vehicle-IMG-Kugstr {
+        height: 280px;
+    }
+    .Vehicle-Card {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .Vehicle-Links {
+        width: auto;
+    }
+    .Vehicle-IMG{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1460px){
+
+    .Car-Window{
+        
+        overflow-y: scroll;
+        overflow-x: hidden;
+        align-items: center;
+        width: 800px;
+        min-height: 100%;
+    }
+    .Car-Atributes-Top{
+        flex-direction: column-reverse;
+    }
+    .Car-Atributes-Top{
+        align-items: center;
+        margin-top: 75px;
+    }
+    .Car-Atributes{
+        margin-top: 75px;
+        text-align: center;
+    }
+    .Car-Descriptions{
+        text-align: center;
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    .Vehicle-IMG-Yellow {
+        height: 200px;
+    }
+    .Vehicle-IMG-Kugstr {
+        height: 200px;
+    }
+    .Vehicle-IMG-Yellow img{
+        width: 400px;
+    }
+    .Vehicle-IMG-Kugstr img{
+        width: 350px;
+    }
+}
+@media screen and (max-width: 755px) {
+    
+    .Vehicle-Name {
+        font-size: 25px;
+    }
+}
 @media screen and (max-width: 715px) {
+    .Car-Window{
+        padding: 70px 20px;
+    }
+    .Car-Atributes{
+        flex-direction: column;
+    }
+    .Car-Descriptions{
+        width: 100%;
+        font-family: 'UI-Light';
+        font-size: 21px;
+    }
     .Price-Window {
         background-color: #FFFFFF;
         padding: 60px 20px;
         width: 400px;
         text-align: center;
         position: relative;
-        
     }
     .Prices {
         flex-direction: column;
@@ -134,36 +293,42 @@
         font-size: 17px;
     }
 }
-
-
-@media screen and (max-width: 1805px){
-    .Vehicle-Card {
-        padding: 80px 0px;
+@media screen and (max-width: 600px){
+    .Car-Window{
+        position: relative;
+        display: block;
     }
-}
-@media screen and (max-width: 1630px){
-    .Vehicle-Card {
-        flex-direction: column-reverse;
-        text-align: center;
+    .Vehicle-IMG-Yellow {
+        height: 150px;
     }
-    .Vehicle-Links {
-        width: auto;
+    .Vehicle-IMG-Kugstr {
+        height: 150px;
     }
-    .Vehicle-IMG{
-        margin-bottom: 50px;
+    .Car-Title {
+        font-size: 30px;
     }
-}
-@media screen and (max-width: 1115px) {
-    .Vehicle-IMG img{
-        width: 500px;
+    .Vehicle-IMG-Yellow img{
+        width: 300px;
     }
-}
-@media screen and (max-width: 755px) {
-    .Vehicle-IMG img{
+    .Vehicle-IMG-Kugstr img{
+        width: 260px;
+    }
+    #Close-Car-Window {
+        font-size: 30px;
+    }
+    .Car-Atribute-Image{
         width: 350px;
     }
-    .Vehicle-Name {
-        font-size: 25px;
+    .Car-Atribute-Image-Kugstr{
+        width: 320px;
+    }
+    .Car-Atributes{
+        font-size: 18px;
+    }
+    .Car-Descriptions{
+        width: 100%;
+        font-family: 'UI-Light';
+        font-size: 20px;
     }
 }
 @media screen and (max-width: 430px) {
@@ -174,3 +339,4 @@
         width: 275px;
     }
 }
+
