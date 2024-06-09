@@ -1,4 +1,4 @@
-.Nav{
+.Nav {
     position: fixed;
     width: 100vw;
     height: 75px;
@@ -9,19 +9,19 @@
     padding-right: 40px;
     z-index: 1;
 }
-.Nav-Left{
+.Nav-Left {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-.Nav-Right{
+.Nav-Right {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
 }
-.Nav-Link{
+.Nav-Link {
     display: flex;
     color: #fafafae1;
     text-decoration: none;
@@ -30,16 +30,14 @@
     margin-right: 50px;
     align-items: center;
 }
-
 /*Animation of Link*/
-.Nav-Link-Animated{
+.Nav-Link-Animated {
     position: relative;
     display: inline-block;
     color: #fff;
     text-decoration: none;
     overflow: hidden;
 }
-
 .Nav-Link-Animated::before,
 .Nav-Link-Animated::after {
   content: "";
@@ -49,29 +47,24 @@
   background-color: #fafafa;
   transition: width 0.5s ease-in-out;
 }
-
 .Nav-Link-Animated::before {
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .Nav-Link-Animated::after {
   bottom: 100%;
   right: 50%;
   transform: translate(50%, 50%);
 }
-
 .Nav-Link-Animated:hover::before,
 .Nav-Link-Animated:hover::after {
   width: 80%;
 }
-
-/**/
-.Logo{
+.Logo {
     margin-right: 20px;
 }
-.Nav-Button{
+.Nav-Button {
     font-family: 'UI-Semibold';
     background-color: #0076c0bd;
     color: #FAFAFA;
@@ -80,7 +73,7 @@
     font-size: 18px;
     cursor: pointer;
 }
-.Nav-Button:hover{
+.Nav-Button:hover {
     background-color: #FAFAFA;
     color: #0076c0bd;
 }

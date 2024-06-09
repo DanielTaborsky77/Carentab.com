@@ -5,8 +5,6 @@ import Vehicles from "./Components/Vehicles";
 import Info from "./Components/Info";
 import Footer from "./Components/Footer";
 
-
-
 const App = () => {
     return (
         <div>

@@ -8,15 +8,10 @@ import Time from '../assets/images/Time.png'
 import Tachometer from '../assets/images/Tachometer.png'
 import Gas from '../assets/images/Gas.png'
 import axios from 'axios';
-
-
 import Conditions from '../assets/Documents/Smlouva_o_najmu_dopravniho_prostredku.pdf'
-
 import Logo from "../assets/images/Logo.png"
-
 import { useFormik } from 'formik';
 import { basicSchema } from "../schemas";
-
 
 const Homepage = () =>{
     const [type, setType] = useState('text');
@@ -37,8 +32,6 @@ const Homepage = () =>{
        }
     },  [isInView]);
     /**/
-
-    
     
     const sendMail = async (e) => {
         // e.preventDefault();
@@ -83,9 +76,9 @@ const Homepage = () =>{
         },
         validationSchema: basicSchema,
         onSubmit,
-        
     });
-    
+
+
     return(
         <div className="Homepage" id="Homepage"> 
             <div className="Homepage-Left-Side" id="HomepageLeftSide">
@@ -105,7 +98,7 @@ const Homepage = () =>{
                     
                     <div className="Double-Input">
                         <div className='Input-Field'>
-                            <input value={values.birthday} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type="text" id="birthday" placeholder="Datum nar *" onFocus={(e) => { e.target.type = 'date'; }}/>
+                            <input value={values.birthday} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type="text" id="birthday" placeholder="Datum nar. *" onFocus={(e) => {e.target.type = 'date';}}/> 
                             {errors.birthday && touched.birthday && <p className="error">{errors.birthday}</p>}
                         </div>
                         <div className='Input-Field'>
@@ -134,15 +127,13 @@ const Homepage = () =>{
                     </div>
                     <div className="Double-Input">
                         <div className='Input-Field'>
-                            <input value={values.from} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type={type} id="from" placeholder="Od *" onFocus={(e) => (setType("date"))}/>
+                            <input value={values.from} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type={type} id="from" placeholder="Od *" onFocus={(e) => {e.target.type = 'date';}}/>
                             {errors.from && touched.from && <p className="error">{errors.from}</p>}
                         </div>
                         <div className='Input-Field'>
-                            <input value={values.to} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type={type} id="to" placeholder="Do *" onFocus={(e) => { e.target.type = 'date';}}/>
+                            <input value={values.to} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type={type} id="to" placeholder="Do *" onFocus={(e) => { e.target.type = 'date';}} />
                             {errors.to && touched.to && <p className="error">{errors.to}</p>}
                         </div>
-                        
-                        
                     </div>
                     <div className="Checkbox-Input">
                         <input value={values.groupB} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="groupB"/>

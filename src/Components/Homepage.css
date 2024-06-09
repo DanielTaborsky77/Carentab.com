@@ -1,13 +1,12 @@
-.Homepage{
+.Homepage {
     padding-top: 75px;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
     margin-bottom: 125px;
 }
-
 /*Homepage Left side*/
-.Homepage-Left-Side{
+.Homepage-Left-Side {
     padding-top: 50px;
     margin-bottom: 50px;
     width: 50vw;
@@ -17,31 +16,32 @@
     justify-content: center;
     align-items: center;
 }
-.Reserve-Car-Title{
+.Reserve-Car-Title {
     font-family: 'UI-Semibold';
     font-size: 35px;
     margin-bottom: 75px;
 }
-.Form-Reserve{
+.Form-Reserve {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-
-.Double-Input{
+.Double-Input {
     display: flex;
     justify-content: space-between;
     width: 500px;
     margin-bottom: 20px;
 }
-.Input-Field{
+.Input-Field {
     display: flex;
     flex-direction: column;
     width: 48%
 }
-.Classic-Input{
+.Classic-Input {
+    border-radius: 0px;
+    color: #1D242B;
     border: none;
     background-color: #c7eeffad;
     padding: 10px 15px;
@@ -49,17 +49,18 @@
     font-size: 100%;
     font-family: "UI-Light";
 }
-.error{
+.error {
     color: rgb(246, 97, 97);
     padding-left: 5px;
     font-family: "UI-Light";
     font-size: 14px;
 }
-.Single-Input{
+.Single-Input {
     width: 500px;
     margin-bottom: 20px;
 }
-.Long-Input{
+.Long-Input {
+    border-radius: 0px;
     border: none;
     border-color: white;
     font-family: "UI-Light";
@@ -68,26 +69,26 @@
     padding: 10px 15px;
     width: 100%;
 }
-.Checkbox-Input{
+.Checkbox-Input {
     width: 500px;
     margin-bottom: 1%;
 }
-.Classic-Label{
+.Classic-Label {
     font-family: "UI-Normal";
     margin-left: 20px;
 }
-.Label-Error{
+.Label-Error {
     font-family: "UI-Normal";
     margin-left: 20px;
     color: rgb(246, 97, 97);
 }
-.Double-Buttons{
+.Double-Buttons {
     margin-top: 1%;
     width: 500px;
     display: flex;
     justify-content: space-evenly;
 }
-.Conditions-Button{
+.Conditions-Button {
     text-decoration: none;
     color: #1D242B;
     width: 42%;
@@ -101,7 +102,7 @@
     font-size: 100%;
     cursor: pointer;
 }
-.Reserve-Button{
+.Reserve-Button {
     width: 40%;
     border: none;
     background-color: #1D242B;
@@ -110,13 +111,12 @@
     font-size: 125%;
     cursor: pointer;
 }
-.Reserve-Button:hover{
+.Reserve-Button:hover {
     background-color: #C7EEFF;
     color: #1D242B;
 }
-
 /*Homepage Right side*/
-.Homepage-Right-Side{
+.Homepage-Right-Side {
     position: relative;
     margin-left: 3vw;
     padding-bottom: 100px;
@@ -127,30 +127,30 @@
     url(../assets/images/Background.jpg);
     background-position: 10% 50%;
 }
-.Social-Media{
+.Social-Media {
     margin-right: 40px;
     margin-left: 40px;
     margin-top: 36px;
 }
-.Social-Media img{
+.Social-Media img {
     margin-bottom: 20px;
     width: 50px;
 }
-.Socials-Responzive{
+.Socials-Responzive {
     display: none;
 }
-.Main-Content{
+.Main-Content {
     padding-top: 130px;
     text-align: right;
     margin-right: 10%;
     color: #fafafaf1;
 }
-.Main-Title{
+.Main-Title {
     font-family: 'UI-Semibold';
     font-size: 35px;
     margin-bottom: 75px;
 }
-.Advantages{
+.Advantages {
     margin-left: 70%;
     width: 30%;
     display: flex;
@@ -158,24 +158,24 @@
     font-family: 'UI-Light';
     margin-bottom: 50px;
 }
-.Atributes{
+.Atributes {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
     margin-bottom: 20px;
 }
-.Time{
+.Time {
     width: 32px;
 }
-.Gas{
+.Gas {
     width: 32px;
     height: 33px;
 }
-.Tachometer{
+.Tachometer {
     width: 32px;
     height: 26px;
 }
-.Paragraph{
+.Paragraph {
     line-height: 30px;
     margin-left: 40%;
     font-family: 'UI-Light';
@@ -205,26 +205,25 @@
 .Line-Between {
     border-right: 1px solid rgba(255, 255, 255, 0.788);
 }
-
 /* Respozivity for 2K resolution */
 @media screen and (min-width: 1980px) and (max-width: 3000px) {
-    .Main-Content{
+    .Main-Content {
         padding-top: 0px;
         display: flex;
         align-items: center;
     }
-    .Double-Input{
+    .Double-Input {
         width: 600px;
         margin-bottom: 30px;
     }
-    .Single-Input{
+    .Single-Input {
         width: 600px;
         margin-bottom: 30px;
     }
-    .Checkbox-Input{
+    .Checkbox-Input {
         width: 600px;
     }
-    .Double-Buttons{
+    .Double-Buttons {
         width: 600px;
     }
 }
@@ -256,14 +255,14 @@
     }
 }
 @media screen and (max-width: 1200px) {
-    .Homepage{
+    .Homepage {
         padding-top: 0px;
         height: auto;
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 0px;
     }
-    .Homepage-Right-Side{
+    .Homepage-Right-Side {
         padding-top: 75px;
         position: relative;
         margin-left: 0vw;
@@ -276,47 +275,45 @@
         url(../assets/images/Background.jpg);
         background-position: 10% 50%;
     }
-    .Social-Media{
+    .Social-Media {
         display: none;
     }
-    .Socials-Responzive{
+    .Socials-Responzive {
         display: block;
         margin-top: 50px;
         margin-bottom: 100px;
     }
-    .Socials-Responzive a{
+    .Socials-Responzive a {
         margin-left: 10px;
         margin-right: 10px;
     }
-    .Socials-Responzive img{
+    .Socials-Responzive img {
         width: 50px;
     }
-    .Main-Content{
+    .Main-Content {
         text-align: center;
         padding-right: 10px;
         padding-left: 10px;
         margin-right: 0px;
     }
-    .Advantages{
+    .Advantages {
         width: 100%;
         margin-left: 0px;
         justify-content: space-around;
     }
-    .Atributes{
+    .Atributes {
         justify-content: center;
     }
-    .Atributes p{
+    .Atributes p {
         margin-left: 20px;
     }
-
     .Paragraph {
         margin-left: 0%;
         width: 80%;
         margin: 0 auto;
         margin-bottom: 20px;
     }
-
-    .Homepage-Left-Side{
+    .Homepage-Left-Side {
     padding-top: 0px;
         min-height: 100vh;
         margin-top: 0px;
@@ -324,18 +321,18 @@
         width: 100%;
         border-right: none;
     }
-    .Double-Input{
+    .Double-Input {
         width: 600px;
         margin-bottom: 30px;
     }
-    .Single-Input{
+    .Single-Input {
         width: 600px;
         margin-bottom: 30px;
     }
-    .Checkbox-Input{
+    .Checkbox-Input {
         width: 600px;
     }
-    .Double-Buttons{
+    .Double-Buttons {
         margin-top: 1%;
         width: 500px;
         display: flex;
@@ -349,7 +346,6 @@
     }
 }
 @media screen and (max-width: 715px) {
-    /**/
     .Homepage-Right-Side {
         padding-top: 0;
         background: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.733)),
@@ -370,7 +366,7 @@
         font-size: 25px;
         font-family: 'UI-Light';
     }
-    .Main-Title{
+    .Main-Title {
         font-size: 30px;
         margin-bottom: 50px;
     }
@@ -404,21 +400,18 @@
         padding-left: 25px;
         padding-right: 25px;
     }
-
-    /**/
     .Reserve-Car-Title {
         margin-top: 100px;
         font-size: 30px;
         text-align: center;
     }
-
     .Double-Input {
         flex-direction: column;
         align-items: center;
         width: 100%;
         margin-bottom: 0px;
     }
-    .Input-Field{
+    .Input-Field {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -427,7 +420,6 @@
     }
     .Classic-Input {
         width: 90vw;
-        
         height: 50px;
         font-size: 19px;
     }
@@ -450,7 +442,6 @@
         font-size: 19px;
         display: flex;
         width: 90%;
-       
     }
     .Double-Buttons {
         margin-top: 30px;
@@ -465,6 +456,5 @@
     .Conditions-Button {
         width: 200px;
         font-family: 'UI-Light';
-
     }
 }

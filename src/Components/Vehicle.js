@@ -1,7 +1,6 @@
 import Yellow from "../assets/images/zlutasek.png";
 import Kugstr from "../assets/images/kugstr.png";
 import "./Vehicle.css"
-
 import React, {useState} from "react";
 
 const Vehicle = (props) => {
@@ -42,33 +41,30 @@ const Vehicle = (props) => {
         document.getElementById("Price-Window-Background-Kugstr").style.display= 'none'; 
         document.body.style.overflow = "visible";
     }
+
     if(props.model == "Yellow"){
         return(
             <div>
                 <div className="Vehicle-Card">
                     <div>
-                    
-                    <p className="Vehicle-Name">{"VW golf IV"}</p>
-        
-                    <div className="Vehicle-Atributes">
-                        <p className="Vehicle-Atribute">Motor: {"1.9 TDI"}</p>
-                        <p className="Vehicle-Atribute">Výkon: {"74 KW"}</p>
-                        <p className="Vehicle-Atribute">Rok výroby: {"2002"}</p>
-                        <p className="Vehicle-Atribute">Druh karosérie: {"Kombi"}</p>
-                        <button onClick={openAtributesYellow} className="Vehicle-Info-Button">Další parametry...</button>
-                    </div>
-                    <div className="Vehicle-Links">
-                        <a href="#HomepageLeftSide"><button className="Vehicle-Button">Rezervovat</button></a>
-                        <button onClick={openPriceYellow} className="Vehicle-Price">Ceník</button>
-                    </div>
+                        <p className="Vehicle-Name">{"VW golf IV"}</p>
+            
+                        <div className="Vehicle-Atributes">
+                            <p className="Vehicle-Atribute">Motor: {"1.9 TDI"}</p>
+                            <p className="Vehicle-Atribute">Výkon: {"74 KW"}</p>
+                            <p className="Vehicle-Atribute">Rok výroby: {"2002"}</p>
+                            <p className="Vehicle-Atribute">Druh karosérie: {"Kombi"}</p>
+                            <button onClick={openAtributesYellow} className="Vehicle-Info-Button">Další parametry...</button>
+                        </div>
+                        <div className="Vehicle-Links">
+                            <a href="#HomepageLeftSide"><button className="Vehicle-Button">Rezervovat</button></a>
+                            <button onClick={openPriceYellow} className="Vehicle-Price">Ceník</button>
+                        </div>
                     </div>
                     
                     <div className="Vehicle-IMG-Yellow">
                         <img src={ Yellow } alt="" />
                     </div>
-
-                    
-                    
                 </div>
                 <div id="Open-Car-Atributes-Yellow">
                     <div className="Car-Window">
@@ -100,7 +96,7 @@ const Vehicle = (props) => {
                         <div className="Car-Descriptions">
                             <p className="Car-Description">
                                 Dále má vozidlo: ABS, Čelní a boční airbagy, Imobilizér, Litá kola, Posilovač řízení, 
-                                Centrální zamykání, Elektricky vyhřívaná sedadla,Isofix (Ukotvení dětské sedačky), 
+                                Centrální zamykání, Elektricky vyhřívaná sedadla, Isofix (Ukotvení dětské sedačky), 
                                 Náhon na přední nápravu a další...
                             </p>
                             <p className="Car-Description">
@@ -240,7 +236,7 @@ const Vehicle = (props) => {
                     </div>
                 </div>
             </div>
-            )
+        )
     }
     
 }

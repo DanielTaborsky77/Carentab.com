@@ -2,7 +2,6 @@ import Vehicle from "./Vehicle";
 import "./Vehicles.css";
 import Carousel, { consts } from 'react-elastic-carousel';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-
 import React, { useEffect, useRef } from  "react";
 import { motion, useInView, useAnimation } from  "framer-motion";
 
@@ -45,7 +44,6 @@ const Vehicles = () => {
       animate={mainControls}
       transition={{ duration: 0.25, delay: 0.25 }}
       
-      
       className="Vehicles-All">
       
         <p className="Vehicles-Title">Naše vozy</p>
@@ -53,9 +51,7 @@ const Vehicles = () => {
           pagination={false}
           renderArrow={customArrow}
         >
-          
-            <Vehicle model="Yellow"/>
-          
+          <Vehicle model="Yellow"/>
           <Vehicle model="Kugstr"/>
         </Carousel>
       </motion.div>
