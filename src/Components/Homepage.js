@@ -148,6 +148,81 @@ const Homepage = () =>{
                         <button className="Reserve-Button" type='submit'>Rezervovat</button>
                     </div>
                 </form>
+
+                <form autocomplete="off" className='Form-Reserve-Mobile' onSubmit={handleSubmit}>
+
+                    <div className="Double-Input">
+                        <div className='Input-Field'>
+                            <label>Jméno *</label>
+                            <input value={values.firstName} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type="text" id="firstName"/>
+                            {errors.firstName && touched.firstName && <p className="error">{errors.firstName}</p>}
+                        </div>
+                        <div className='Input-Field'>
+                        <label>Příjmení *</label>
+                            <input value={values.lastName} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type="text" id="lastName"/>
+                            {errors.lastName && touched.lastName && <p className="error">{errors.lastName}</p>}
+                        </div>
+                    </div>
+                    
+                    <div className="Double-Input">
+                        <div className='Input-Field'>
+                            <label>Datum narození *</label>
+                            <input value={values.birthday} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type="date" id="birthday"/> 
+                            {errors.birthday && touched.birthday && <p className="error">{errors.birthday}</p>}
+                        </div>
+                        <div className='Input-Field'>
+                        <label>Tel *</label>
+                            <input value={values.phone} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type="tel" id="phone"/>
+                            {errors.phone && touched.phone && <p className="error">{errors.phone}</p>}
+                        </div>    
+                    </div>
+
+                    <div className="Single-Input">
+                        <label>E-mail *</label>
+                        <input value={values.email} onChange={handleChange} onBlur={handleBlur} className='Long-Input' type="email" id="email"/>
+                        {errors.email && touched.email && <p className="error">{errors.email}</p>}
+                    </div>
+                    <div className="Double-Input">
+                        <div className="Input-Field">
+                        <label>Vozidlo *</label>
+                            <select value={values.car} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" id="car">
+                                <option value="" defaultValue disabled>Vyberte vozidlo *</option>
+                                <option value={"VW Golf IV"}>VW Golf IV</option>
+                                <option value={"Ford Kuga"}>Ford Kuga</option>
+                            </select>
+                            {errors.car && touched.car && <p className="error">{errors.car}</p>}
+                        </div>
+                        <div className="Input-Field">
+                            <label>Město vyzvednutí *</label>
+                            <input value={values.town} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type="text" id="town"/>
+                            {errors.town && touched.town && <p className="error">{errors.town}</p>}
+                        </div>
+                    </div>
+                    <div className="Double-Input">
+                        <div className='Input-Field'>
+                            <label>Rezervuji Od *</label>
+                            <input value={values.from} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type='date'/>
+                            {errors.from && touched.from && <p className="error">{errors.from}</p>}
+                        </div>
+                        <div className='Input-Field'>
+                            <label>Rezervuji Do *</label>
+                            <input value={values.to} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type='date'/>
+                            {errors.to && touched.to && <p className="error">{errors.to}</p>}
+                        </div>
+                    </div>
+                    <div className="Checkbox-Input">
+                        <input value={values.groupB} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="groupB"/>
+                        <label className={(errors.groupB && touched.groupB ? "Label-Error" : "") || "Classic-Label"} for="groupB">Mám platný řidičský průkaz skupiny B *</label>
+                    </div>
+                    <div className="Checkbox-Input">
+                        <input value={values.gdpr} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="gdpr"/>
+                        <label className={(errors.gdpr && touched.gdpr ? "Label-Error" : "") || "Classic-Label"} for="gdpr">Souhlasím se zpracováním osobních údajů *</label>
+                    </div>
+                    <div className="Double-Buttons">
+                        <a href={Conditions} className="Conditions-Button" download><img src={PdfImage} alt="" />Smluvní podmínky</a>
+                        <button className="Reserve-Button" type='submit'>Rezervovat</button>
+                    </div>
+                </form>
             </div>
             <div className="Homepage-Right-Side">
                 

@@ -1,3 +1,7 @@
+.Form-Reserve-Mobile {
+    
+    display: none;
+}
 .Homepage {
     padding-top: 75px;
     min-height: 100vh;
@@ -312,6 +316,23 @@
         width: 80%;
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+    .Form-Reserve {
+        display: none;
+    }
+    .Form-Reserve-Mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    label{
+        width: 90vw;
+        color: #1d242bb6;
+        font-size: 18px;
+        font-family: 'UI-Light';
+        margin-bottom: 5px;
     }
     .Homepage-Left-Side {
     padding-top: 0px;

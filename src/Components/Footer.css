@@ -13,9 +13,9 @@
     font-size: 15px;
     font-family: "UI-Light";
 }
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 400px) {
     .Footer-Copyright {
-        font-size: 15px;
+        font-size: 13px;
     }
     .Footer-Creater {
         margin-bottom: 20px;
