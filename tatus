@@ -1,0 +1,89 @@
+[33mcommit 1407407b38360a321fdd5fe77b11de6cb522e42e[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Mon Jun 10 21:13:59 2024 +0200
+
+    Detailing responzivity of footer and do mobile version of reservation form
+
+[33mcommit a5121e1ffddd3ae54c3b29da34bf484365d32fe1[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Sun Jun 9 20:15:12 2024 +0200
+
+    Last details and deleting some useless code
+
+[33mcommit 90847cb0bfc33548479ce3a09a99e8b61d65c3bf[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Thu Jun 6 21:46:11 2024 +0200
+
+    Upgraded view of sended E-mail and delete files
+
+[33mcommit 77dd14e5405c70e05720425268eeb09bbe00a0f1[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Thu Jun 6 20:09:14 2024 +0200
+
+    Another car parms and modal window to agree Cookies added
+
+[33mcommit 0974c35c7c47ec6be09869c70d5ff95083846616[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Sun May 26 17:00:20 2024 +0200
+
+    Last version on website
+
+[33mcommit f643ab8d7448095833e68ce98ad360deddbd1b9d[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Thu Feb 1 20:43:24 2024 +0100
+
+    Repairing of navigation and start of Our Vehicles
+
+[33mcommit 7c0321ada67d06456cc4d31fb06259e22747765a[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Sun Jan 28 18:31:55 2024 +0100
+
+    Added animation
+
+[33mcommit c1fe2c1a28f6be3fac671b99ef9929db955e2752[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Sun Jan 28 15:24:48 2024 +0100
+
+    Responzive for 2K resolution
+
+[33mcommit 8eb1ba8ac995c6694d0dfab8aea645da6561ed8d[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Sat Jan 27 18:48:40 2024 +0100
+
+    Vzhled na rozlišení 1920x1080 skoro hotov
+
+[33mcommit a406db33c523f5a14e9eaf5309fc5310b9f46c6f[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Sat Jan 27 15:46:01 2024 +0100
+
+    Skorodokončení vzhledu a stylování formuláře
+
+[33mcommit 22ed9a227577238f4b5fecb3914e2ad1a60f8763[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Thu Jan 25 21:51:19 2024 +0100
+
+    Začátek vzhledu formuláře
+
+[33mcommit 74d97293c42889751d1f4b806d7e0a244e8d1b97[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Thu Jan 25 18:46:00 2024 +0100
+
+    Přidány fonty a doupravena navigační lišta
+
+[33mcommit a89607ee4b20a087fb51b0c01f7f6dac0a012466[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Wed Jan 24 21:11:34 2024 +0100
+
+    Struktura Navigace připravena
+
+[33mcommit 99e4d20678f9d9440c170fbb402ddfbe16e8d8c2[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Tue Jan 23 21:28:02 2024 +0100
+
+    Základní struktura připravena
+
+[33mcommit 0280b65f85a2d52cad98b7979ee8be99702b46cd[m
+Author: Daniel Táborský <daniel-taborsky77@seznam.cz>
+Date:   Tue Jan 23 20:58:26 2024 +0100
+
+    Initialize project using Create React App

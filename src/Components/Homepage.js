@@ -201,12 +201,12 @@ const Homepage = () =>{
                     <div className="Double-Input">
                         <div className='Input-Field'>
                             <label>Rezervuji Od *</label>
-                            <input value={values.from} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type='date'/>
+                            <input value={values.from} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type='date' id="from"/>
                             {errors.from && touched.from && <p className="error">{errors.from}</p>}
                         </div>
                         <div className='Input-Field'>
                             <label>Rezervuji Do *</label>
-                            <input value={values.to} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type='date'/>
+                            <input value={values.to} onChange={handleChange} onBlur={handleBlur} className="Classic-Input" type='date' id="to"/>
                             {errors.to && touched.to && <p className="error">{errors.to}</p>}
                         </div>
                     </div>
