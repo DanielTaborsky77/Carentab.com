@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useAnimation, useInView, motion } from 'framer-motion';
 import './Homepage.css'
+import Check from '../assets/images/Check.png'
+import Cross from '../assets/images/Cross.png';
 import PdfImage from '../assets/images/Pdf.png'
 import Instagram from '../assets/images/Instagram.png'
 import Facebook from '../assets/images/Facebook.png'
@@ -32,11 +34,13 @@ const Homepage = () =>{
        }
     },  [isInView]);
     /**/
-    
+    const [isSuccessModalVisible, setIsSuccessModalVisible] = useState(false);
+    const [isErrorModalVisible, setIsErrorModalVisible] = useState(false);
+
     const sendMail = async (e) => {
         // e.preventDefault();
         try {
-          await axios.post('https://carentab.com/api.php', { 
+          await axios.post('https://carentab.com/api.php', {
             firstName: values.firstName,
             lastName: values.lastName,
             birthday: values.birthday,
@@ -49,18 +53,42 @@ const Homepage = () =>{
             groupB: values.groupB,
             gdpr: values.gdpr
           }); // Odeslat data na serverové API
-          alert('E-mail byl úspěšně odeslán');
+          resetForm();
+          setIsSuccessModalVisible(true);
         } catch (error) {
           console.error('Chyba při odesílání e-mailu:', error);
-          alert('Nepodařilo se odeslat e-mail');
+          setIsErrorModalVisible(true);
         }
       };
+      const formRef = useRef(null);
+    useEffect(() => {
+        
+        if (isSuccessModalVisible) {
+          const timer = setTimeout(() => {
+            setIsSuccessModalVisible(false);
+          }, 5000);
+          
+          // Vyčištění časovače při odmountování komponenty nebo při skrytí modalu
+          return () => clearTimeout(timer);
+        }
+    }, [isSuccessModalVisible]);
+
+    useEffect(() => {
+        if (isErrorModalVisible) {
+          const timer = setTimeout(() => {
+            setIsErrorModalVisible(false);
+          }, 5000);
+          
+          // Vyčištění časovače při odmountování komponenty nebo při skrytí modalu
+          return () => clearTimeout(timer);
+        }
+    }, [isErrorModalVisible]);
 
     const onSubmit = (e) => {
         sendMail(e);
     }
       
-    const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
+    const {values, errors, touched, handleBlur, handleChange, handleSubmit, resetForm} = useFormik({
         initialValues: {
             firstName: "",
             lastName: "",
@@ -71,19 +99,37 @@ const Homepage = () =>{
             town: "",
             from: "",
             to: "",
-            groupB: "",
-            gdpr: ""
+            groupB: false,
+            gdpr: false,
         },
         validationSchema: basicSchema,
         onSubmit,
     });
 
-
     return(
+        <div>
+            {isSuccessModalVisible && (
+            <div className="Modal-Reservation" style={{ display: isSuccessModalVisible ? 'fixed' : 'none' }}>
+                <div className="Modal-Reservation-Box">
+                    <p className="Modal-Reservation-Tittle">Rezervace proběhla úspěšně</p>
+                    <img className='Modal-Check' src={Check} alt="Check"/>
+                </div>
+            </div>
+            )}
+
+            {isErrorModalVisible && (
+            <div className="Modal-Reservation" style={{ display: isErrorModalVisible ? 'fixed' : 'none' }}>
+                <div className="Modal-Reservation-Box">
+                    <p className="Modal-Reservation-Tittle">Rezervace se nepovedla</p>
+                    <img className='Modal-Check' src={Cross} alt="Cross"/>
+                </div>
+            </div>
+            )}
         <div className="Homepage" id="Homepage"> 
+            
             <div className="Homepage-Left-Side" id="HomepageLeftSide">
                 <p className="Reserve-Car-Title">Zarezervujte si vozidlo</p>
-                <form autocomplete="off" className='Form-Reserve' onSubmit={handleSubmit}>
+                <form className='Form-Reserve' ref={formRef} onSubmit={handleSubmit}>
 
                     <div className="Double-Input">
                         <div className='Input-Field'>
@@ -136,11 +182,11 @@ const Homepage = () =>{
                         </div>
                     </div>
                     <div className="Checkbox-Input">
-                        <input value={values.groupB} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="groupB"/>
+                        <input checked={values.groupB} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="groupB"/>
                         <label className={(errors.groupB && touched.groupB ? "Label-Error" : "") || "Classic-Label"} for="groupB">Mám platný řidičský průkaz skupiny B *</label>
                     </div>
                     <div className="Checkbox-Input">
-                        <input value={values.gdpr} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="gdpr"/>
+                        <input checked={values.gdpr} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="gdpr"/>
                         <label className={(errors.gdpr && touched.gdpr ? "Label-Error" : "") || "Classic-Label"} for="gdpr">Souhlasím se zpracováním osobních údajů *</label>
                     </div>
                     <div className="Double-Buttons">
@@ -149,7 +195,7 @@ const Homepage = () =>{
                     </div>
                 </form>
 
-                <form autocomplete="off" className='Form-Reserve-Mobile' onSubmit={handleSubmit}>
+                <form autocomplete="off" className='Form-Reserve-Mobile' ref={formRef} onSubmit={handleSubmit}>
 
                     <div className="Double-Input">
                         <div className='Input-Field'>
@@ -211,11 +257,11 @@ const Homepage = () =>{
                         </div>
                     </div>
                     <div className="Checkbox-Input">
-                        <input value={values.groupB} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="groupB"/>
+                        <input checked={values.groupB} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="groupB"/>
                         <label className={(errors.groupB && touched.groupB ? "Label-Error" : "") || "Classic-Label"} for="groupB">Mám platný řidičský průkaz skupiny B *</label>
                     </div>
                     <div className="Checkbox-Input">
-                        <input value={values.gdpr} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="gdpr"/>
+                        <input checked={values.gdpr} onChange={handleChange} onBlur={handleBlur} className="Classic-Checkbox" type="Checkbox" id="gdpr"/>
                         <label className={(errors.gdpr && touched.gdpr ? "Label-Error" : "") || "Classic-Label"} for="gdpr">Souhlasím se zpracováním osobních údajů *</label>
                     </div>
                     <div className="Double-Buttons">
@@ -302,6 +348,7 @@ const Homepage = () =>{
                         <p>+420 775 612 484</p>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

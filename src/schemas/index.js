@@ -70,9 +70,11 @@ export const basicSchema = yup.object().shape({
       return isEndDateValid(endDate, startDate)}),
     groupB: yup
     .bool()
+    .oneOf([true])
     .required('Musí být zaškrtnuto'),
     gdpr: yup
     .bool()
+    .oneOf([true])
     .required('Musí být zaškrtnuto'),
 
 })

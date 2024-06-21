@@ -1,0 +1,53 @@
+<html>
+        <head>
+            <title>Rezervace vozidla</title>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                    /* Styling for blurred background */
+            
+                    /* Styling for modal */
+                    .modal {
+                        position: fixed;
+                        top: 20%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: rgba(255, 255, 255, 0.897); /* Semi-transparent black background */
+                        padding: 20px;
+                        border-radius: 10px;
+                        color: white;
+                        text-align: center;
+                    }
+            
+                    /* Styling for title */
+                    .modal h1 {
+                        font-size: 24px;
+                    }
+            
+                    /* Styling for checkmark image */
+                    .checkmark {
+                        display: block;
+                        margin: 20px auto;
+                        width: 50px; /* Adjust size as needed */
+                    }
+                    
+                </style>
+            </head>
+            <body>
+                <div class="">
+
+                </div>
+                <div class="Modal-Window">
+                    <h1>Rezervace proběhla v pořádku</h1>
+                    <img src="checkmark.png" alt="Zelená fajfka" class="checkmark">
+                </div>
+            
+                <script>
+                    // Hide the modal after 5 seconds
+                    setTimeout(function() {
+                        document.querySelector('.modal').style.display = 'none';
+                    }, 5000);
+                </script>
+        </body>
+        </html>
